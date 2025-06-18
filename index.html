@@ -1,7 +1,3 @@
-Aquí tienes la versión actualizada del index.html con la nueva imagen central de alimentos saludables que he generado para ti:
-
-HTML
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,7 +8,9 @@ HTML
     <meta name="keywords" content="alimentación consciente, dieta saludable, recetas nutritivas, bienestar integral, vida sana, nutrición holística, hábitos saludables, mindfulness, comida real, sostenibilidad alimentaria, salud digestiva, alimentación intuitiva, superalimentos, detox natural">
     <meta name="author" content="Conscientemente Team">
     <link rel="canonical" href="https://tudominio.github.io/index.html">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+
+    <style>
         /* Variables CSS para colores y espaciado */
         :root {
             --color-primary: #4caf50; /* Verde principal */
@@ -188,7 +186,7 @@ HTML
             font-weight: bold;
         }
 
-        /* Bloques de contenido */
+        /* Bloques de contenido - General */
         .content-block {
             background-color: var(--color-white);
             border: 1px solid var(--color-secondary);
@@ -207,6 +205,37 @@ HTML
         .content-block p {
             margin-bottom: 0;
         }
+
+        /* Bloques de Testimonios/Comentarios */
+        .comments-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-unit);
+            margin-top: var(--spacing-unit) * 1.5;
+        }
+
+        .comment-block {
+            background-color: var(--color-light);
+            border: 1px solid var(--color-secondary);
+            padding: var(--spacing-unit);
+            border-radius: 8px;
+            text-align: left;
+            box-shadow: 0 2px 4px var(--color-shadow);
+        }
+
+        .comment-block p {
+            font-style: italic;
+            margin-bottom: var(--spacing-unit) * 0.5;
+            color: var(--color-dark);
+        }
+
+        .comment-block .author {
+            font-weight: bold;
+            color: var(--color-primary);
+            text-align: right;
+            display: block;
+        }
+
 
         /* Footer Styling */
         footer {
@@ -240,7 +269,6 @@ HTML
             header p.lema {
                 font-size: 1.2rem;
             }
-            /* La navegación sigue teniendo overflow-x para mantener una fila */
             section h2 {
                 font-size: 1.8rem;
             }
@@ -253,6 +281,9 @@ HTML
             .image-grid {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
+            .comments-section {
+                grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+            }
         }
 
         @media (max-width: 480px) {
@@ -262,12 +293,11 @@ HTML
             header p.lema {
                 font-size: 1rem;
             }
-            /* En pantallas muy pequeñas, el scroll horizontal será más probable */
             nav ul li {
-                margin: 0 10px; /* Un poco más de espacio en móviles también */
+                margin: 0 10px;
             }
             nav ul li a {
-                font-size: 1rem; /* Restaurado a 1rem */
+                font-size: 1rem;
                 padding: 7px 10px;
             }
             .image-grid {
@@ -290,6 +320,7 @@ HTML
                     <li><a href="#bienestar" class="nav-link" data-section="bienestar" title="Bienestar Integral: Mente, cuerpo y alma">Bienestar</a></li>
                     <li><a href="#sostenibilidad" class="nav-link" data-section="sostenibilidad" title="Sostenibilidad Alimentaria y Hábitos Ecológicos">Sostenibilidad</a></li>
                     <li><a href="#blog" class="nav-link" data-section="blog" title="Blog de Alimentación Consciente y Vida Sana">Blog</a></li>
+                    <li><a href="#testimonios" class="nav-link" data-section="testimonios" title="Opiniones y Experiencias de nuestros usuarios">Testimonios</a></li>
                     <li><a href="#contacto" class="nav-link" data-section="contacto" title="Contacta con Conscientemente para consultas de salud">Contacto</a></li>
                 </ul>
             </nav>
@@ -423,6 +454,39 @@ HTML
                 <p>No te pierdas nuestros consejos de **expertos en nutrición** y **vida sana** para transformar tu día a día.</p>
             </section>
 
+            <section id="testimonios">
+                <h2>Lo que Dicen Nuestros Usuarios: Historias de Éxito</h2>
+                <p>Nos encanta escuchar cómo Conscientemente ha transformado la vida de nuestros usuarios. Sus experiencias nos motivan a seguir ofreciendo el mejor contenido sobre **alimentación saludable** y **bienestar**. Aquí compartimos algunos de sus comentarios:</p>
+
+                <div class="comments-section">
+                    <div class="comment-block">
+                        <p>"Gracias a Conscientemente, he aprendido a escuchar a mi cuerpo y a disfrutar de la comida sin culpa. ¡Mi energía ha mejorado muchísimo!"</p>
+                        <span class="author">— Ana G., Madrid</span>
+                    </div>
+                    <div class="comment-block">
+                        <p>"Las recetas son increíbles y súper fáciles de seguir. Mi familia y yo comemos más verduras que nunca, ¡y nos encanta!"</p>
+                        <span class="author">— Carlos R., Bilbao</span>
+                    </div>
+                    <div class="comment-block">
+                        <p>"Pensaba que comer sano era aburrido, pero este sitio me ha demostrado lo contrario. Los consejos de bienestar son un plus."</p>
+                        <span class="author">— Sofía M., Barcelona</span>
+                    </div>
+                    <div class="comment-block">
+                        <p>"La sección de sostenibilidad es fantástica. Me ha ayudado a tomar decisiones más conscientes para el planeta desde mi cocina."</p>
+                        <span class="author">— Javier L., Valencia</span>
+                    </div>
+                    <div class="comment-block">
+                        <p>"Por fin una guía clara de nutrición que no me hace sentir abrumado. ¡Gracias por simplificar la **vida sana**!"</p>
+                        <span class="author">— Elena P., Sevilla</span>
+                    </div>
+                    <div class="comment-block">
+                        <p>"He logrado un **bienestar integral** que nunca creí posible. La meditación y la alimentación consciente van de la mano aquí."</p>
+                        <span class="author">— Marco S., Málaga</span>
+                    </div>
+                </div>
+                <p>¿Te gustaría compartir tu experiencia con nosotros? ¡Nos encantaría oír de ti en la sección de Contacto!</p>
+            </section>
+
             <section id="contacto">
                 <h2>Contacta con Conscientemente para tu Bienestar</h2>
                 <p>¿Tienes preguntas sobre **alimentación saludable**, necesitas asesoramiento personalizado sobre **nutrición consciente**, o quieres colaborar con nosotros? No dudes en **contactarnos**. Estamos aquí para apoyarte en tu viaje hacia el **bienestar integral** y responder a todas tus inquietudes.</p>
@@ -490,5 +554,3 @@ HTML
     </script>
 </body>
 </html>
-Novedades en esta Versión
-Imagen Central en la Sección "Inicio": He reemplazado la imagen anterior en la sección de inicio con una nueva imagen de alimentos saludables que he generado para ti. La URL de la imagen es
