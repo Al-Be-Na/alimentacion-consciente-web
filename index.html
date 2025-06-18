@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conscientemente | Alimentación Saludable y Bienestar Consciente</title>
     <meta name="description" content="Conscientemente es tu guía para una alimentación saludable y consciente. Descubre recetas nutritivas, consejos de bienestar, y hábitos sostenibles para una vida plena. ¡Transforma tu salud hoy!">
-    <meta name="keywords" content="alimentación consciente, dieta saludable, recetas nutritivas, bienestar integral, vida sana, nutrición holística, hábitos saludables, mindfulness, comida real, sostenibilidad alimentaria, salud digestiva, alimentación intuitiva, superalimentos, detox natural">
+    <meta name="keywords" content="alimentación consciente, dieta saludable, recetas nutritivas, bienestar integral, vida sana, nutrición holística, hábitos saludables, mindfulness, comida real, sostenibilidad alimentaria, salud digestiva, alimentación intuitiva, superalimentos, detox natural, hábitos saludables, vida activa, bienestar emocional, alimentación vegetariana, alimentación vegana, nutrición deportiva, salud mental, equilibrio vida, bienestar emocional">
     <meta name="author" content="Conscientemente Team">
     <link rel="canonical" href="https://tudominio.github.io/index.html">
     <link rel="icon" href="favicon.ico" type="image/x-icon"> 
@@ -18,7 +18,7 @@
             --color-dark: #2b4d25;    /* Verde oscuro para texto */
             --color-light: #eaf4ea;   /* Fondo claro */
             --color-white: #ffffff;
-            --color-shadow: rgba(0,0,0,0.15);
+            --color-shadow-light: rgba(0,0,0,0.08); /* Sombra más sutil */
             --spacing-unit: 20px;
         }
 
@@ -27,7 +27,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--color-light);
+            background-color: var(--color-light); /* Fondo general de la página */
             color: var(--color-dark);
             text-align: center;
             line-height: 1.6;
@@ -35,7 +35,7 @@
         }
 
         .container {
-            max-width: 960px;
+            max-width: 1080px; /* Un poco más ancho para menos sensación de encuadre */
             margin: 0 auto;
             padding: 0 var(--spacing-unit);
         }
@@ -45,14 +45,15 @@
             background-color: var(--color-primary);
             padding: var(--spacing-unit) * 1.5 var(--spacing-unit) var(--spacing-unit) * 0.75;
             color: var(--color-white);
-            box-shadow: 0 4px 8px var(--color-shadow);
+            box-shadow: 0 4px 8px var(--color-shadow-light); /* Sombra más sutil */
         }
 
         header h1 {
             margin: 0;
-            font-size: 3rem;
+            font-size: 3.2rem; /* Un poco más grande */
             letter-spacing: 2px;
             margin-bottom: var(--spacing-unit) * 0.5;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Pequeña sombra para el título */
         }
 
         header h1 a {
@@ -62,7 +63,7 @@
 
         header p.lema {
             margin-top: var(--spacing-unit) * 0.25;
-            font-size: 1.5rem;
+            font-size: 1.6rem; /* Un poco más grande */
             font-weight: 600;
             font-style: italic;
             margin-bottom: var(--spacing-unit);
@@ -73,160 +74,185 @@
             padding: 0;
             margin: 0;
             display: flex;
-            flex-wrap: nowrap; /* Mantiene los elementos en una sola fila */
+            flex-wrap: nowrap;
             justify-content: center;
-            overflow-x: auto; /* Permite scroll horizontal si no caben */
-            -webkit-overflow-scrolling: touch; /* Suaviza el scroll en iOS */
-            padding-bottom: 5px; /* Espacio para la barra de scroll si aparece */
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 5px;
         }
 
         nav ul li {
-            margin: 0 15px; /* Ajustado para más espacio entre botones */
-            flex-shrink: 0; /* Evita que los ítems se encojan */
+            margin: 0 18px; /* Más espacio entre elementos */
+            flex-shrink: 0;
         }
 
         nav ul li a {
             color: var(--color-white);
             text-decoration: none;
-            font-size: 1.1rem; /* Restaurado a un tamaño legible */
+            font-size: 1.15rem; /* Ligeramente más grande */
             font-weight: bold;
-            padding: 8px 12px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            white-space: nowrap; /* Evita que el texto se rompa */
+            padding: 10px 15px; /* Más padding */
+            border-radius: 8px; /* Bordes más redondeados */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Añadimos transform */
+            white-space: nowrap;
         }
 
         nav ul li a:hover, nav ul li a.active {
             background-color: var(--color-secondary);
             color: var(--color-dark);
+            transform: translateY(-2px); /* Pequeño efecto al pasar el ratón */
         }
 
-        /* Main Content Styling */
+        /* Main Content Styling - Secciones */
         main {
             padding: var(--spacing-unit) * 2 0;
         }
 
         section {
-            background-color: var(--color-white);
-            margin-bottom: var(--spacing-unit) * 1.5;
-            padding: var(--spacing-unit) * 1.5;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px var(--color-shadow);
+            background-color: transparent; /* Eliminamos el fondo blanco */
+            margin-bottom: var(--spacing-unit) * 3; /* Más espacio entre secciones */
+            padding: var(--spacing-unit) * 0; /* Padding a 0, usaremos el container */
+            border-radius: 0; /* Sin bordes redondeados */
+            box-shadow: none; /* Sin sombra */
             text-align: left;
         }
 
+        section .container {
+             background-color: var(--color-white); /* El container interno ahora tiene fondo blanco */
+             padding: var(--spacing-unit) * 1.5;
+             border-radius: 8px;
+             box-shadow: 0 2px 8px var(--color-shadow-light); /* Sombra sutil solo en el container */
+        }
+
+
         section h2 {
-            font-size: 2.2rem;
+            font-size: 2.5rem; /* Un poco más grande */
             color: var(--color-primary);
-            margin-bottom: var(--spacing-unit);
-            border-bottom: 2px solid var(--color-secondary);
-            padding-bottom: var(--spacing-unit) * 0.5;
+            margin-bottom: var(--spacing-unit) * 1.5; /* Más espacio */
+            border-bottom: 3px solid var(--color-secondary); /* Borde más pronunciado */
+            padding-bottom: var(--spacing-unit) * 0.75;
+            text-align: center; /* Títulos centrados */
         }
 
         section h3 {
-            font-size: 1.6rem;
+            font-size: 1.8rem; /* Un poco más grande */
             color: var(--color-dark);
-            margin-top: var(--spacing-unit) * 1.25;
+            margin-top: var(--spacing-unit) * 1.5; /* Más espacio */
             margin-bottom: var(--spacing-unit) * 0.75;
+            text-align: center; /* Subtítulos centrados */
         }
 
         section p {
-            font-size: 1.1rem;
-            margin-bottom: var(--spacing-unit) * 0.75;
+            font-size: 1.15rem; /* Ligeramente más grande */
+            margin-bottom: var(--spacing-unit); /* Más espacio */
+            padding: 0 10px; /* Pequeño padding para el texto */
         }
 
         section ul {
             list-style: disc;
-            margin-left: var(--spacing-unit);
-            margin-bottom: var(--spacing-unit) * 0.75;
+            margin-left: var(--spacing-unit) * 2; /* Más margen */
+            margin-bottom: var(--spacing-unit) * 1.5;
             font-size: 1.1rem;
         }
         section ul li {
-            margin-bottom: var(--spacing-unit) * 0.4;
+            margin-bottom: var(--spacing-unit) * 0.5;
         }
 
         /* Image Styling */
         .section-image {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            margin: var(--spacing-unit) auto;
+            border-radius: 12px; /* Más redondeado */
+            margin: var(--spacing-unit) auto var(--spacing-unit) * 1.5; /* Más margen inferior */
             display: block;
-            box-shadow: 0 4px 8px var(--color-shadow);
+            box-shadow: 0 6px 12px var(--color-shadow-light); /* Sombra más suave */
+            object-fit: cover; /* Asegura que la imagen se ajuste */
         }
 
         .image-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--spacing-unit);
-            margin-top: var(--spacing-unit) * 1.25;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustamos minmax */
+            gap: var(--spacing-unit) * 1.5; /* Más espacio entre imágenes */
+            margin-top: var(--spacing-unit) * 2;
             justify-items: center;
         }
 
         .image-grid .grid-item {
-            background-color: var(--color-light);
-            border-radius: 8px;
+            background-color: var(--color-white); /* Sigue teniendo fondo para destacar la imagen */
+            border-radius: 12px; /* Más redondeado */
             overflow: hidden;
-            box-shadow: 0 2px 4px var(--color-shadow);
+            box-shadow: 0 4px 10px var(--color-shadow-light); /* Sombra más suave */
             text-align: center;
-            padding-bottom: var(--spacing-unit) * 0.5;
+            padding-bottom: var(--spacing-unit) * 0.75; /* Más padding */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto al pasar el ratón */
+        }
+        .image-grid .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px var(--color-shadow-light);
         }
 
         .image-grid img {
             width: 100%;
-            height: 200px;
+            height: 220px; /* Un poco más de altura */
             object-fit: cover;
             display: block;
         }
 
         .image-grid .caption {
-            font-size: 0.95rem;
+            font-size: 1rem; /* Un poco más grande */
             color: var(--color-dark);
-            padding: var(--spacing-unit) * 0.5;
+            padding: var(--spacing-unit) * 0.75 var(--spacing-unit) * 0.5; /* Más padding */
             font-weight: bold;
         }
 
         /* Bloques de contenido - General */
         .content-block {
-            background-color: var(--color-white);
+            background-color: var(--color-light); /* Fondo más claro para los bloques internos */
             border: 1px solid var(--color-secondary);
-            border-left: 5px solid var(--color-primary);
-            padding: var(--spacing-unit);
-            margin-top: var(--spacing-unit);
-            border-radius: 5px;
+            border-left: 6px solid var(--color-primary); /* Borde más ancho */
+            padding: var(--spacing-unit) * 1.2; /* Más padding */
+            margin-top: var(--spacing-unit) * 1.5; /* Más margen superior */
+            border-radius: 8px;
             text-align: left;
+            box-shadow: 0 2px 6px var(--color-shadow-light); /* Sombra más sutil */
         }
         .content-block h4 {
             color: var(--color-primary);
             margin-top: 0;
-            margin-bottom: var(--spacing-unit) * 0.5;
-            font-size: 1.3rem;
+            margin-bottom: var(--spacing-unit) * 0.6; /* Un poco más de espacio */
+            font-size: 1.4rem; /* Un poco más grande */
         }
         .content-block p {
             margin-bottom: 0;
+            font-size: 1.05rem; /* Ligeramente más pequeño para contraste */
         }
 
         /* Bloques de Testimonios/Comentarios */
         .comments-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-unit);
-            margin-top: var(--spacing-unit) * 1.5;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustamos minmax */
+            gap: var(--spacing-unit) * 1.5; /* Más espacio */
+            margin-top: var(--spacing-unit) * 2;
         }
 
         .comment-block {
-            background-color: var(--color-light);
+            background-color: var(--color-white); /* Fondo blanco para los testimonios */
             border: 1px solid var(--color-secondary);
-            padding: var(--spacing-unit);
-            border-radius: 8px;
+            padding: var(--spacing-unit) * 1.2;
+            border-radius: 10px; /* Más redondeado */
             text-align: left;
-            box-shadow: 0 2px 4px var(--color-shadow);
+            box-shadow: 0 3px 9px var(--color-shadow-light); /* Sombra más suave */
+            transition: transform 0.2s ease;
+        }
+        .comment-block:hover {
+            transform: translateY(-3px);
         }
 
         .comment-block p {
             font-style: italic;
-            margin-bottom: var(--spacing-unit) * 0.5;
+            margin-bottom: var(--spacing-unit) * 0.7; /* Más espacio */
             color: var(--color-dark);
+            font-size: 1.05rem; /* Un poco más grande */
         }
 
         .comment-block .author {
@@ -234,6 +260,68 @@
             color: var(--color-primary);
             text-align: right;
             display: block;
+            font-size: 0.95rem;
+        }
+
+        /* Bloque de cita destacada */
+        .quote-block {
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+            padding: var(--spacing-unit) * 2; /* Más padding */
+            margin: var(--spacing-unit) * 2 auto; /* Más margen */
+            border-radius: 12px; /* Más redondeado */
+            font-size: 1.4rem; /* Más grande */
+            font-style: italic;
+            box-shadow: 0 6px 15px var(--color-shadow-light); /* Sombra más prominente */
+            max-width: 75%; /* Ligeramente más estrecho para el efecto de cita */
+            line-height: 1.5;
+        }
+        .quote-block .quote-author {
+            font-size: 1.1rem; /* Más grande */
+            font-style: normal;
+            font-weight: bold;
+            margin-top: var(--spacing-unit); /* Más margen */
+            display: block;
+            text-align: right;
+            opacity: 0.9; /* Ligeramente transparente */
+        }
+
+        /* Bloques de sección con imagen a un lado (nueva variación) */
+        .section-split {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-unit) * 2; /* Espacio entre columnas */
+            background-color: var(--color-white);
+            padding: var(--spacing-unit) * 2;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px var(--color-shadow-light);
+            margin-top: var(--spacing-unit) * 2;
+        }
+
+        .section-split .text-content, .section-split .image-content {
+            flex: 1;
+            min-width: 300px; /* Asegura que no se encojan demasiado */
+        }
+
+        .section-split .text-content {
+            padding-right: var(--spacing-unit);
+        }
+
+        .section-split .image-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px var(--color-shadow-light);
+        }
+        .section-split h3 {
+            text-align: left;
+            padding-left: 0;
+            margin-top: 0;
+        }
+        .section-split p {
+            padding-left: 0;
         }
 
 
@@ -241,14 +329,14 @@
         footer {
             background-color: var(--color-primary);
             color: var(--color-white);
-            padding: var(--spacing-unit);
-            font-size: 0.9rem;
-            box-shadow: 0 -4px 8px var(--color-shadow);
-            margin-top: var(--spacing-unit) * 2;
+            padding: var(--spacing-unit) * 1.5; /* Más padding */
+            font-size: 1rem; /* Más grande */
+            box-shadow: 0 -4px 8px var(--color-shadow-light); /* Sombra sutil */
+            margin-top: var(--spacing-unit) * 3; /* Más margen superior */
         }
 
         footer p {
-            margin: 5px 0;
+            margin: 8px 0; /* Más espacio */
         }
 
         footer a {
@@ -262,46 +350,98 @@
         }
 
         /* Responsive Adjustments */
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
+            .container {
+                max-width: 90%;
+            }
             header h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             header p.lema {
+                font-size: 1.4rem;
+            }
+            section h2 {
+                font-size: 2.2rem;
+            }
+            section h3 {
+                font-size: 1.6rem;
+            }
+            section p, section ul {
+                font-size: 1.05rem;
+            }
+            .quote-block {
                 font-size: 1.2rem;
+                padding: var(--spacing-unit) * 1.5;
+            }
+            .section-split .text-content, .section-split .image-content {
+                min-width: unset; /* Reiniciar para que no fijen ancho en tabletas */
+                flex: 1 1 100%; /* Ocupan todo el ancho en pantallas más pequeñas */
+            }
+            .section-split .text-content {
+                padding-right: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            header p.lema {
+                font-size: 1.1rem;
+            }
+            nav ul li {
+                margin: 0 12px;
+            }
+            nav ul li a {
+                font-size: 1rem;
+                padding: 8px 12px;
             }
             section h2 {
                 font-size: 1.8rem;
+                margin-bottom: var(--spacing-unit);
+                padding-bottom: var(--spacing-unit) * 0.5;
             }
             section h3 {
                 font-size: 1.4rem;
+                margin-top: var(--spacing-unit);
+                margin-bottom: var(--spacing-unit) * 0.5;
             }
-            section p, section ul {
-                font-size: 1rem;
+            section p {
+                font-size: 0.95rem;
+            }
+            section ul {
+                font-size: 0.95rem;
+                margin-left: var(--spacing-unit);
             }
             .image-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-template-columns: 1fr; /* Una columna en móviles */
+                gap: var(--spacing-unit);
             }
             .comments-section {
-                grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+                grid-template-columns: 1fr;
+                gap: var(--spacing-unit);
+            }
+            .quote-block {
+                font-size: 1rem;
+                padding: var(--spacing-unit);
+                max-width: 90%;
+            }
+            .comment-block p {
+                font-size: 0.9rem;
+            }
+            .section-split {
+                padding: var(--spacing-unit);
+                gap: var(--spacing-unit);
             }
         }
 
         @media (max-width: 480px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            header p.lema {
-                font-size: 1rem;
-            }
             nav ul li {
-                margin: 0 10px;
+                margin: 0 8px;
             }
             nav ul li a {
-                font-size: 1rem;
-                padding: 7px 10px;
-            }
-            .image-grid {
-                grid-template-columns: 1fr;
+                font-size: 0.9rem;
+                padding: 6px 9px;
             }
         }
     </style>
@@ -320,7 +460,7 @@
                     <li><a href="#bienestar" class="nav-link" data-section="bienestar" title="Bienestar Integral: Mente, cuerpo y alma">Bienestar</a></li>
                     <li><a href="#sostenibilidad" class="nav-link" data-section="sostenibilidad" title="Sostenibilidad Alimentaria y Hábitos Ecológicos">Sostenibilidad</a></li>
                     <li><a href="#blog" class="nav-link" data-section="blog" title="Blog de Alimentación Consciente y Vida Sana">Blog</a></li>
-                    <li><a href="#testimonios" class="nav-link" data-section="testimonios" title="Opiniones y Experiencias de nuestros usuarios">Testimonios</a></li>
+                    <li><a href="#recursos" class="nav-link" data-section="recursos" title="Recursos adicionales para tu bienestar">Recursos</a></li> <li><a href="#testimonios" class="nav-link" data-section="testimonios" title="Opiniones y Experiencias de nuestros usuarios">Testimonios</a></li>
                     <li><a href="#contacto" class="nav-link" data-section="contacto" title="Contacta con Conscientemente para consultas de salud">Contacto</a></li>
                 </ul>
             </nav>
@@ -328,8 +468,8 @@
     </header>
 
     <main>
-        <div class="container">
-            <section id="inicio">
+        <section id="inicio">
+            <div class="container">
                 <h2>Tu Espacio para una Alimentación y Vida Consciente</h2>
                 <img src="http://googleusercontent.com/image_generation_content/0" alt="Una variedad vibrante y colorida de alimentos saludables, incluyendo frutas frescas como fresas maduras, arándanos y naranjas en rodajas, junto con una variedad de verduras como pimientos, floretes de brócoli y espinacas verdes vibrantes, junto con granos integrales abundantes como la quinua y el arroz integral, y proteínas magras que incluyen pechuga de pollo a la parrilla y salmón al horno, dispuestas estéticamente sobre una mesa de madera rústica, bañadas por la suave luz natural que entra por una ventana cercana. La escena irradia frescura y vitalidad, con un enfoque en las texturas y colores de los ingredientes. La luz natural crea un ambiente cálido y acogedor, realzando el atractivo visual de la comida saludable, con un enfoque suave en el fondo para llamar la atención sobre la detallada variedad de alimentos saludables, presentados de una manera que es apetitosa e inspiradora." class="section-image" width="800" height="450">
                 <p>Bienvenido a **Conscientemente**, el lugar donde la **alimentación saludable** se une con el bienestar integral. Aquí, te guiamos en tu viaje hacia un estilo de vida más pleno, ofreciéndote recursos, **recetas nutritivas** y consejos prácticos para comer con intención y vivir en armonía. Nuestro objetivo es ayudarte a construir **hábitos saludables** duraderos y mejorar tu **salud integral**.</p>
@@ -339,9 +479,11 @@
                     <h4>¿Por qué elegir la Alimentación Consciente?</h4>
                     <p>La **alimentación consciente** te ayuda a desarrollar una relación más sana con la comida, reduciendo el estrés relacionado con la dieta y promoviendo la **salud digestiva**. Es una práctica que fomenta el **bienestar holístico** y te permite disfrutar plenamente de cada comida.</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="principios">
+        <section id="principios">
+            <div class="container">
                 <h2>Los Pilares de la Alimentación Consciente y el Bienestar</h2>
                 <p>La **alimentación consciente** no es solo una dieta, es una filosofía de vida que integra la mente, el cuerpo y el espíritu. Se basa en escuchar a tu cuerpo, reconocer las señales de hambre y saciedad, y elegir alimentos que nutran tanto tu cuerpo como tu mente. Nuestros **principios clave** incluyen:</p>
                 <ul>
@@ -351,10 +493,16 @@
                     <li>**Escucha Corporal:** Aprende a distinguir el hambre física de la emocional, y a honrar las necesidades de tu cuerpo.</li>
                     <li>**Flexibilidad y Equilibrio:** Permítete disfrutar sin culpa, equilibrando el placer con la nutrición para una **dieta saludable** sin restricciones extremas.</li>
                 </ul>
+                <div class="quote-block">
+                    "La verdadera **alimentación consciente** comienza cuando escuchamos el susurro de nuestro cuerpo, no el ruido del mundo exterior."
+                    <span class="quote-author">— Un sabio Conscientemente</span>
+                </div>
                 <p>Adoptar estos **principios de bienestar** te llevará a una relación más sana y positiva con la comida y contigo mismo, mejorando tu **calidad de vida**.</p>
-            </section>
+            </div>
+        </section>
 
-            <section id="recetas">
+        <section id="recetas">
+            <div class="container">
                 <h2>Recetas Saludables y Deliciosas para Inspirarte</h2>
                 <p>En **Conscientemente**, creemos que comer **saludable** no tiene por qué ser aburrido. Nuestra colección de **recetas saludables** está diseñada para inspirarte a crear platos deliciosos y nutritivos que te encantarán. Encontrarás opciones para cada momento del día y para diferentes preferencias dietéticas, siempre con un enfoque en la **comida real**.</p>
 
@@ -384,11 +532,25 @@
                         <img src="https://picsum.photos/id/1070/400/300" alt="Postre saludable con bayas y crema, una opción dulce sin remordimientos" width="400" height="300">
                         <div class="caption">Postres Conscientes</div>
                     </div>
+                    <div class="grid-item">
+                        <img src="https://picsum.photos/id/1025/400/300" alt="Receta de smoothie verde desintoxicante, ideal para un detox natural y una dieta sana" width="400" height="300">
+                        <div class="caption">Bebidas Saludables</div>
+                    </div>
+                     <div class="grid-item">
+                        <img src="https://picsum.photos/id/250/400/300" alt="Plato de comida vegetariana con lentejas y verduras asadas, para una alimentación rica en proteínas vegetales" width="400" height="300">
+                        <div class="caption">Opciones Vegetarianas/Veganas</div>
+                    </div>
+                </div>
+                <div class="content-block">
+                    <h4>Consejo Rápido de Recetas:</h4>
+                    <p>¡No tengas miedo de experimentar! Usa especias y hierbas frescas para añadir sabor a tus **recetas saludables** sin depender de la sal o azúcares añadidos.</p>
                 </div>
                 <p>Cada **receta** incluye ingredientes de **comida real** y sencillas instrucciones para que cocinar sea un placer. ¡Anímate a probar nuestras **recetas nutritivas** y transforma tu cocina con **alimentación consciente**!</p>
-            </section>
+            </div>
+        </section>
 
-            <section id="nutricion">
+        <section id="nutricion">
+            <div class="container">
                 <h2>Guías de Nutrición Esencial para tu Salud y Bienestar</h2>
                 <p>Comprender los fundamentos de la **nutrición** es clave para tomar decisiones alimentarias informadas y optimizar tu **salud**. En esta sección, desglosamos la ciencia detrás de los alimentos, explicando qué nutrientes necesita tu cuerpo y dónde encontrarlos. Exploramos temas como:</p>
                 <ul>
@@ -402,10 +564,16 @@
                     <h4>Nutrición Intuitiva: Escucha a tu Cuerpo</h4>
                     <p>Más allá de contar calorías, la **nutrición intuitiva** te enseña a reconectar con las señales internas de tu cuerpo. Aprende a comer cuando tienes hambre y a parar cuando estás satisfecho, fomentando una relación sana y libre de culpas con la comida.</p>
                 </div>
+                <div class="quote-block">
+                    "La mejor dieta es aquella que nutre tu cuerpo, tu mente y tu alma."
+                    <span class="quote-author">— Principio Conscientemente</span>
+                </div>
                 <p>Nuestras **guías de nutrición** están diseñadas para empoderarte con el conocimiento necesario para optimizar tu **salud** a través de la **alimentación consciente** y basada en evidencia.</p>
-            </section>
+            </div>
+        </section>
 
-            <section id="bienestar">
+        <section id="bienestar">
+            <div class="container">
                 <h2>Bienestar Integral: Mente, Cuerpo y Alma en Armonía</h2>
                 <img src="https://picsum.photos/id/1071/800/450" alt="Persona meditando en un entorno natural, simbolizando la calma mental y el bienestar integral" class="section-image" width="800" height="450">
                 <p>La **salud** va más allá de lo que comes. El **bienestar integral** abarca el equilibrio entre tu **alimentación consciente**, tu actividad física, tu salud mental y tus emociones. En **Conscientemente**, te ofrecemos recursos para cultivar un estilo de vida equilibrado y pleno:</p>
@@ -415,14 +583,26 @@
                     <li>**Sueño Reparador:** Consejos y estrategias para mejorar la calidad de tu descanso, fundamental para la recuperación y el **bienestar**.</li>
                     <li>**Gestión del Estrés:** Estrategias prácticas para mantener la calma, la resiliencia y el equilibrio emocional en un mundo ajetreado.</li>
                 </ul>
-                <div class="content-block">
-                    <h4>Conexión Mente-Cuerpo: El Poder de la Alimentación Consciente</h4>
-                    <p>La forma en que nos alimentamos impacta directamente en nuestro estado de ánimo y claridad mental. Una **dieta saludable** y consciente es un pilar para el **bienestar mental**, reduciendo la ansiedad y mejorando la concentración.</p>
+                <div class="section-split">
+                    <div class="text-content">
+                        <h3>El Poder de la Conexión Mente-Cuerpo</h3>
+                        <p>La forma en que nos alimentamos impacta directamente en nuestro estado de ánimo y claridad mental. Una **dieta saludable** y consciente es un pilar para el **bienestar mental**, reduciendo la ansiedad y mejorando la concentración.</p>
+                        <p>Además, prácticas como el yoga o el tai chi, que combinan movimiento con **atención plena**, pueden potenciar enormemente tu **bienestar emocional** y tu **vida sana**.</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="https://picsum.photos/id/1084/500/350" alt="Yoga y meditación para la conexión mente-cuerpo y reducción del estrés">
+                    </div>
+                </div>
+                <div class="quote-block">
+                    "El **bienestar** no es un destino, sino un viaje consciente de elecciones diarias."
+                    <span class="quote-author">— Filosofía Conscientemente</span>
                 </div>
                 <p>Adopta estos **hábitos saludables** y experimenta una mejora significativa en tu calidad de vida y tu **bienestar general**.</p>
-            </section>
+            </div>
+        </section>
 
-            <section id="sostenibilidad">
+        <section id="sostenibilidad">
+            <div class="container">
                 <h2>Alimentación Sostenible y Hábitos Ecológicos para un Futuro Mejor</h2>
                 <p>En **Conscientemente**, nos preocupamos por el planeta tanto como por tu **salud**. Promovemos la **alimentación sostenible**, eligiendo opciones que minimicen el impacto ambiental y apoyen sistemas alimentarios justos. Descubre cómo tus decisiones alimentarias pueden hacer una diferencia significativa:</p>
                 <ul>
@@ -432,14 +612,26 @@
                     <li>**Compra Consciente y Ética:** Elige productos con certificaciones ecológicas, de comercio justo y con empaques sostenibles.</li>
                     <li>**Huertos Urbanos y Comunitarios:** Fomenta la producción local de alimentos y la conexión con la naturaleza.</li>
                 </ul>
-                <div class="content-block">
-                    <h4>El Impacto de tu Plato en el Planeta</h4>
-                    <p>Cada elección alimentaria tiene un efecto. Al optar por una **alimentación consciente** y sostenible, no solo mejoras tu **salud**, sino que también contribuyes a la protección del medio ambiente y al bienestar de las futuras generaciones.</p>
+                <div class="section-split">
+                    <div class="image-content">
+                        <img src="https://picsum.photos/id/1005/500/350" alt="Huerto urbano cultivando verduras frescas y orgánicas">
+                    </div>
+                    <div class="text-content">
+                        <h3>Tu Plato, Tu Voto por el Planeta</h3>
+                        <p>Cada elección alimentaria tiene un efecto. Al optar por una **alimentación consciente** y sostenible, no solo mejoras tu **salud**, sino que también contribuyes a la protección del medio ambiente y al bienestar de las futuras generaciones.</p>
+                        <p>Involúcrate en iniciativas locales de **sostenibilidad alimentaria** y sé parte activa del cambio.</p>
+                    </div>
+                </div>
+                <div class="quote-block">
+                    "Nutrir el cuerpo de forma **consciente** es también nutrir el planeta."
+                    <span class="quote-author">— Conscientemente</span>
                 </div>
                 <p>Cada pequeña acción cuenta para construir un futuro más verde y **saludable** para todos. Sé parte del cambio hacia la **sostenibilidad alimentaria**.</p>
-            </section>
+            </div>
+        </section>
 
-            <section id="blog">
+        <section id="blog">
+            <div class="container">
                 <h2>Nuestro Blog: Reflexiones sobre Alimentación y Vida Consciente</h2>
                 <p>Visita nuestro **blog** para leer artículos profundos, noticias y análisis sobre **alimentación consciente**, **nutrición**, **bienestar**, **sostenibilidad** y las últimas tendencias en **salud integral**. Publicamos contenido regularmente para mantenerte informado y motivado en tu camino hacia una **vida saludable** y plena.</p>
                 <h3>Últimos Artículos de Interés en Nuestro Blog:</h3>
@@ -450,11 +642,50 @@
                     <li>"Recetas Rápidas y Nutritivas para Días Ocupados: Soluciones para la **comida real**."</li>
                     <li>"El Poder de los **Superalimentos**: Qué son y cómo incorporarlos a tu dieta."</li>
                     <li>"Desintoxicación Natural: Claves para un **Detox Saludable** y seguro."</li>
+                    <li>"**Nutrición Deportiva**: Maximizando tu rendimiento con alimentos conscientes."</li>
+                    <li>"Estrategias para una **Salud Digestiva** Óptima: El segundo cerebro."</li>
                 </ul>
+                <div class="content-block">
+                    <h4>Comentario del Editor:</h4>
+                    <p>¡Explora nuestro blog para encontrar inspiración y consejos prácticos que te ayudarán a vivir una **vida sana** y plena cada día! Siempre con el objetivo de empoderarte en tu camino hacia el **bienestar integral**.</p>
+                </div>
                 <p>No te pierdas nuestros consejos de **expertos en nutrición** y **vida sana** para transformar tu día a día.</p>
-            </section>
+            </div>
+        </section>
 
-            <section id="testimonios">
+        <section id="recursos">
+            <div class="container">
+                <h2>Recursos Adicionales para Impulsar tu Bienestar</h2>
+                <p>En **Conscientemente**, no solo te ofrecemos información, sino también herramientas y recursos prácticos para que tu viaje hacia la **alimentación saludable** y el **bienestar consciente** sea aún más fácil y efectivo. Explora nuestras recomendaciones:</p>
+                <h3>Descubre Nuestras Herramientas Esenciales:</h3>
+                <div class="image-grid">
+                    <div class="grid-item">
+                        <img src="https://picsum.photos/id/111/400/300" alt="Libro de cocina con recetas saludables">
+                        <div class="caption">E-books de Recetas Exclusivas</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://picsum.photos/id/113/400/300" alt="Persona meditando con aplicación móvil">
+                        <div class="caption">Guías de Meditación Guiada</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://picsum.photos/id/123/400/300" alt="Calendario de planificación de comidas">
+                        <div class="caption">Plantillas de Planificación Semanal</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://picsum.photos/id/145/400/300" alt="Pesas y equipamiento deportivo">
+                        <div class="caption">Rutinas de Ejercicio en Casa</div>
+                    </div>
+                </div>
+                <div class="content-block">
+                    <h4>Próximamente: Talleres y Webinars</h4>
+                    <p>Mantente atento a nuestros próximos talleres y webinars en vivo con **expertos en nutrición** y **bienestar integral**. ¡Será una oportunidad única para aprender, interactuar y profundizar en tu **vida sana**!</p>
+                </div>
+                <p>Nuestra meta es equiparte con todo lo que necesitas para alcanzar un estado de **salud** óptimo y una **vida consciente** plena. ¡Empieza a utilizar estos **recursos** hoy mismo!</p>
+            </div>
+        </section>
+
+        <section id="testimonios">
+            <div class="container">
                 <h2>Lo que Dicen Nuestros Usuarios: Historias de Éxito</h2>
                 <p>Nos encanta escuchar cómo Conscientemente ha transformado la vida de nuestros usuarios. Sus experiencias nos motivan a seguir ofreciendo el mejor contenido sobre **alimentación saludable** y **bienestar**. Aquí compartimos algunos de sus comentarios:</p>
 
@@ -483,11 +714,21 @@
                         <p>"He logrado un **bienestar integral** que nunca creí posible. La meditación y la alimentación consciente van de la mano aquí."</p>
                         <span class="author">— Marco S., Málaga</span>
                     </div>
+                    <div class="comment-block">
+                        <p>"Las rutinas de ejercicio y las guías de sueño han sido un antes y un después para mi **bienestar general**. ¡Muy agradecido!"</p>
+                        <span class="author">— Laura F., Zaragoza</span>
+                    </div>
+                    <div class="comment-block">
+                        <p>"Me encanta el enfoque holístico. No solo se preocupan por la comida, sino por todo lo que implica una **vida consciente**."</p>
+                        <span class="author">— Pablo V., Las Palmas</span>
+                    </div>
                 </div>
                 <p>¿Te gustaría compartir tu experiencia con nosotros? ¡Nos encantaría oír de ti en la sección de Contacto!</p>
-            </section>
+            </div>
+        </section>
 
-            <section id="contacto">
+        <section id="contacto">
+            <div class="container">
                 <h2>Contacta con Conscientemente para tu Bienestar</h2>
                 <p>¿Tienes preguntas sobre **alimentación saludable**, necesitas asesoramiento personalizado sobre **nutrición consciente**, o quieres colaborar con nosotros? No dudes en **contactarnos**. Estamos aquí para apoyarte en tu viaje hacia el **bienestar integral** y responder a todas tus inquietudes.</p>
                 <p>Puedes enviarnos un mensaje a <a href="mailto:info@conscientemente.com" title="Enviar correo electrónico a Conscientemente">info@conscientemente.com</a> o seguirnos en nuestras redes sociales (próximamente) para obtener más **consejos de salud**, **recetas** y actualizaciones. ¡Esperamos escucharte y ayudarte a vivir una vida más **consciente** y plena!</p>
@@ -495,8 +736,12 @@
                     <h4>¿Listo para tu Consulta Gratuita?</h4>
                     <p>Ofrecemos una breve consulta inicial sin compromiso para entender tus necesidades y cómo podemos ayudarte a alcanzar tus objetivos de **salud y bienestar** a través de la **alimentación consciente**.</p>
                 </div>
-            </section>
-        </div>
+                <div class="quote-block">
+                    "Tu salud es tu mayor riqueza. Invierte en ella de forma **consciente**."
+                    <span class="quote-author">— Conscientemente</span>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -519,6 +764,10 @@
                 const targetSection = document.getElementById(id);
                 if (targetSection) {
                     targetSection.style.display = 'block'; // Muestra la sección deseada
+                    window.scrollTo({
+                        top: targetSection.offsetTop - document.querySelector('header').offsetHeight, // Ajuste para el header fijo
+                        behavior: 'smooth'
+                    });
                 }
 
                 // Actualiza la clase 'active' en el enlace de navegación
