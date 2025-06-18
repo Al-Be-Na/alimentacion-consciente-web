@@ -1,71 +1,370 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Conscientemente - Alimentación Saludable</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0; padding: 0;
-      background-color: #eaf4ea;
-      color: #2b4d25;
-      text-align: center;
-    }
-    header {
-      background-color: #4caf50;
-      padding: 30px 20px;
-      color: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      letter-spacing: 2px;
-    }
-    header p.lema {
-      margin-top: 10px;
-      font-size: 1.5rem;
-      font-weight: 600;
-      font-style: italic;
-    }
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    main h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    main p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    footer {
-      background-color: #4caf50;
-      color: white;
-      padding: 15px 0;
-      font-size: 0.9rem;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conscientemente | Alimentación Saludable y Bienestar Consciente</title>
+    <meta name="description" content="Descubre Conscientemente, tu guía completa para una alimentación saludable y consciente. Recetas nutritivas, consejos de bienestar y hábitos sostenibles para vivir mejor.">
+    <meta name="keywords" content="alimentación consciente, dieta saludable, recetas saludables, bienestar, vida sana, nutrición, hábitos saludables, mindfulness, comida real, sostenibilidad, salud integral, alimentación vegetariana, alimentación vegana">
+    <meta name="author" content="Conscientemente">
+    <link rel="canonical" href="https://tudominio.github.io/index.html">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <style>
+        /* Estilos CSS Básicos para un diseño moderno y legible */
+        :root {
+            --color-primary: #4caf50; /* Verde principal */
+            --color-secondary: #8bc34a; /* Verde más claro */
+            --color-dark: #2b4d25;    /* Verde oscuro para texto */
+            --color-light: #eaf4ea;   /* Fondo claro */
+            --color-white: #ffffff;
+            --color-shadow: rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-light);
+            color: var(--color-dark);
+            text-align: center;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Desplazamiento suave para anclas */
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: var(--color-primary);
+            padding: 30px 20px 15px; /* Ajustado para la nav */
+            color: var(--color-white);
+            box-shadow: 0 4px 8px var(--color-shadow);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        header h1 a {
+            color: var(--color-white);
+            text-decoration: none;
+        }
+
+        header p.lema {
+            margin-top: 5px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Para poner los enlaces en línea */
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+            justify-content: center; /* Centra los elementos de navegación */
+        }
+
+        nav ul li {
+            margin: 0 15px 10px; /* Espacio entre elementos y margen inferior para responsividad */
+        }
+
+        nav ul li a {
+            color: var(--color-white);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background-color: var(--color-secondary);
+            color: var(--color-dark);
+        }
+
+        /* Main Content Styling */
+        main {
+            padding: 40px 0;
+        }
+
+        section {
+            background-color: var(--color-white);
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px var(--color-shadow);
+            text-align: left; /* Alineación de texto dentro de las secciones */
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--color-secondary);
+            padding-bottom: 10px;
+        }
+
+        section h3 {
+            font-size: 1.6rem;
+            color: var(--color-dark);
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        section ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        section ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: 20px 0;
+            font-size: 0.9rem;
+            box-shadow: 0 -4px 8px var(--color-shadow);
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: var(--color-white);
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--color-secondary);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header p.lema {
+                font-size: 1.2rem;
+            }
+            nav ul li {
+                margin: 0 10px 8px;
+            }
+            nav ul li a {
+                font-size: 1rem;
+                padding: 6px 10px;
+            }
+            section h2 {
+                font-size: 1.8rem;
+            }
+            section h3 {
+                font-size: 1.4rem;
+            }
+            section p, section ul {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p.lema {
+                font-size: 1rem;
+            }
+            nav ul {
+                flex-direction: column; /* Apila los enlaces en pantallas muy pequeñas */
+                align-items: center;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Conscientemente</h1>
-    <p class="lema">Vive y come conscientemente saludable</p>
-  </header>
-  <main>
-    <h2>Bienvenido a tu espacio de alimentación consciente</h2>
-    <p>
-      Aquí encontrarás recursos, recetas y consejos para llevar una vida saludable y en armonía con el planeta.
-    </p>
-  </main>
-  <footer>
-    &copy; 2025 Conscientemente. Todos los derechos reservados.
-  </footer>
+    <header>
+        <div class="container">
+            <h1><a href="#inicio" title="Conscientemente | Inicio de Alimentación Saludable">Conscientemente</a></h1>
+            <p class="lema">Vive y come conscientemente saludable</p>
+            <nav>
+                <ul>
+                    <li><a href="#inicio" class="nav-link" data-section="inicio" title="Inicio: Tu camino hacia la alimentación consciente">Inicio</a></li>
+                    <li><a href="#principios" class="nav-link" data-section="principios" title="Principios de la alimentación consciente y el bienestar">Principios</a></li>
+                    <li><a href="#recetas" class="nav-link" data-section="recetas" title="Recetas saludables y fáciles para tu dieta">Recetas</a></li>
+                    <li><a href="#nutricion" class="nav-link" data-section="nutricion" title="Guías de Nutrición: Alimentos y sus beneficios">Nutrición</a></li>
+                    <li><a href="#bienestar" class="nav-link" data-section="bienestar" title="Bienestar Integral: Mente, cuerpo y alma">Bienestar</a></li>
+                    <li><a href="#sostenibilidad" class="nav-link" data-section="sostenibilidad" title="Sostenibilidad Alimentaria y Hábitos Ecológicos">Sostenibilidad</a></li>
+                    <li><a href="#blog" class="nav-link" data-section="blog" title="Blog de Alimentación Consciente y Vida Sana">Blog</a></li>
+                    <li><a href="#contacto" class="nav-link" data-section="contacto" title="Contacta con Conscientemente para consultas de salud">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="inicio">
+                <h2>Tu Espacio para una Alimentación y Vida Consciente</h2>
+                <p>Bienvenido a **Conscientemente**, el lugar donde la **alimentación saludable** se une con el bienestar integral. Aquí, te guiamos en tu viaje hacia un estilo de vida más pleno, ofreciéndote recursos, **recetas nutritivas** y consejos prácticos para comer con intención y vivir en armonía. Nuestro objetivo es ayudarte a construir **hábitos saludables** duraderos.</p>
+                <p>Descubre cómo la **nutrición consciente** puede transformar tu energía, tu salud y tu conexión con el mundo. Únete a nuestra comunidad y empieza hoy mismo tu camino hacia una vida más **saludable y consciente**.</p>
+            </section>
+
+            <section id="principios">
+                <h2>Los Pilares de la Alimentación Consciente</h2>
+                <p>La **alimentación consciente** no es solo una dieta, es una filosofía de vida. Se basa en escuchar a tu cuerpo, reconocer las señales de hambre y saciedad, y elegir alimentos que nutran tanto tu cuerpo como tu mente. Nuestros **principios clave** incluyen:</p>
+                <ul>
+                    <li>**Comer con Atención Plena:** Disfruta cada bocado, saborea los sabores y texturas.</li>
+                    <li>**Alimentos Reales y Nutritivos:** Prioriza productos frescos, de temporada y mínimamente procesados.</li>
+                    <li>**Sostenibilidad:** Elige opciones que respeten el planeta y las comunidades locales.</li>
+                    <li>**Escucha Corporal:** Aprende a distinguir el hambre física de la emocional.</li>
+                    <li>**Flexibilidad:** Permítete disfrutar sin culpa, equilibrando el placer con la nutrición.</li>
+                </ul>
+                <p>Adoptar estos **principios de bienestar** te llevará a una relación más sana y positiva con la comida y contigo mismo.</p>
+            </section>
+
+            <section id="recetas">
+                <h2>Recetas Saludables y Deliciosas para Todos</h2>
+                <p>En **Conscientemente**, creemos que comer **saludable** no tiene por qué ser aburrido. Nuestra colección de **recetas saludables** está diseñada para inspirarte a crear platos deliciosos y nutritivos que te encantarán. Encontrarás opciones para:</p>
+                <ul>
+                    <li>**Desayunos energéticos:** Batidos verdes, avena nocturna, tostadas de aguacate.</li>
+                    <li>**Comidas nutritivas:** Ensaladas vibrantes, bowls de cereales, sopas reconfortantes.</li>
+                    <li>**Cenas ligeras:** Platos de verduras asadas, pescados al vapor, legumbres.</li>
+                    <li>**Snacks saludables:** Frutas frescas, frutos secos, hummus casero.</li>
+                </ul>
+                <p>Cada **receta** incluye ingredientes de **comida real** y sencillas instrucciones para que cocinar sea un placer. ¡Anímate a probar nuestras **recetas nutritivas** y transforma tu cocina!</p>
+            </section>
+
+            <section id="nutricion">
+                <h2>Guías de Nutrición Esencial para tu Salud</h2>
+                <p>Comprender los fundamentos de la **nutrición** es clave para tomar decisiones alimentarias informadas. En esta sección, desglosamos la ciencia detrás de los alimentos, explicando qué nutrientes necesita tu cuerpo y dónde encontrarlos. Exploramos temas como:</p>
+                <ul>
+                    <li>**Macronutrientes:** Carbohidratos, proteínas y grasas saludables.</li>
+                    <li>**Micronutrientes:** Vitaminas y minerales esenciales para el **bienestar**.</li>
+                    <li>**Hidratación:** La importancia del agua en tu **dieta saludable**.</li>
+                    <li>**Alimentos funcionales:** Superalimentos y sus beneficios para la **salud integral**.</li>
+                </ul>
+                <p>Nuestras **guías de nutrición** están diseñadas para empoderarte con el conocimiento necesario para optimizar tu **salud** a través de la **alimentación consciente**.</p>
+            </section>
+
+            <section id="bienestar">
+                <h2>Bienestar Integral: Mente, Cuerpo y Alma</h2>
+                <p>La **salud** va más allá de lo que comes. El **bienestar integral** abarca el equilibrio entre tu **alimentación consciente**, tu actividad física, tu salud mental y tus emociones. En **Conscientemente**, te ofrecemos recursos para cultivar un estilo de vida equilibrado:</p>
+                <ul>
+                    <li>**Mindfulness y Meditación:** Técnicas para reducir el estrés y mejorar tu relación con la comida.</li>
+                    <li>**Actividad Física:** Guías para incorporar movimiento a tu día a día.</li>
+                    <li>**Sueño Reparador:** Consejos para mejorar la calidad de tu descanso.</li>
+                    <li>**Gestión del Estrés:** Estrategias para mantener la calma en un mundo ajetreado.</li>
+                </ul>
+                <p>Adopta estos **hábitos saludables** y experimenta una mejora significativa en tu calidad de vida y tu **bienestar general**.</p>
+            </section>
+
+            <section id="sostenibilidad">
+                <h2>Alimentación Sostenible y Hábitos Ecológicos</h2>
+                <p>En **Conscientemente**, nos preocupamos por el planeta tanto como por tu **salud**. Promovemos la **alimentación sostenible**, eligiendo opciones que minimicen el impacto ambiental. Descubre cómo tus decisiones alimentarias pueden hacer una diferencia:</p>
+                <ul>
+                    <li>**Reducción de Residuos:** Consejos para cocinar sin desperdicios.</li>
+                    <li>**Consumo Local y de Temporada:** Apoya a los agricultores de tu comunidad.</li>
+                    <li>**Opciones Vegetales:** Explora los beneficios ambientales y de **salud** de las dietas basadas en plantas.</li>
+                    <li>**Compra Consciente:** Elige productos con empaques ecológicos y certificados.</li>
+                </ul>
+                <p>Cada pequeña acción cuenta para construir un futuro más verde y **saludable** para todos. Sé parte del cambio hacia la **sostenibilidad alimentaria**.</p>
+            </section>
+
+            <section id="blog">
+                <h2>Nuestro Blog: Reflexiones sobre Alimentación y Vida Consciente</h2>
+                <p>Visita nuestro **blog** para leer artículos profundos, noticias y análisis sobre **alimentación consciente**, **nutrición**, **bienestar** y **sostenibilidad**. Publicamos contenido regularmente para mantenerte informado y motivado en tu camino hacia una **vida saludable**.</p>
+                <h3>Últimos Artículos de Interés en Nuestro Blog:</h3>
+                <ul>
+                    <li>"Los 5 Mitos Más Comunes sobre la **Alimentación Saludable**"</li>
+                    <li>"Cómo Empezar tu Viaje de **Mindfulness Alimentario**"</li>
+                    <li>"El Impacto de la Comida en tu Humor: Una Guía de **Bienestar**"</li>
+                    <li>"Recetas Rápidas y Nutritivas para Días Ocupados"</li>
+                </ul>
+                <p>No te pierdas nuestros consejos de **expertos en nutrición** y **vida sana**.</p>
+            </section>
+
+            <section id="contacto">
+                <h2>Contacta con Conscientemente para tu Bienestar</h2>
+                <p>¿Tienes preguntas sobre **alimentación saludable**, necesitas asesoramiento personalizado sobre **nutrición consciente**, o quieres colaborar con nosotros? No dudes en **contactarnos**. Estamos aquí para apoyarte en tu viaje hacia el **bienestar integral**.</p>
+                <p>Puedes enviarnos un mensaje a info@conscientemente.com o seguirnos en nuestras redes sociales (próximamente) para obtener más **consejos de salud** y **recetas**. ¡Esperamos escucharte y ayudarte a vivir una vida más **consciente**!</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Conscientemente. Todos los derechos reservados. | **Alimentación Saludable y Bienestar Consciente**</p>
+            <p><a href="#politica-privacidad" title="Política de Privacidad de Datos">Política de Privacidad</a> | <a href="#terminos-servicio" title="Términos de Servicio de Conscientemente">Términos de Servicio</a></p>
+            <p>Hecho con conciencia desde **Bilbao, España**.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+
+            function activateSection(id) {
+                sections.forEach(section => {
+                    section.style.display = 'none'; // Oculta todas las secciones
+                });
+                const targetSection = document.getElementById(id);
+                if (targetSection) {
+                    targetSection.style.display = 'block'; // Muestra la sección deseada
+                }
+
+                // Actualiza la clase 'active' en el enlace de navegación
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-section') === id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // Manejar clics en los enlaces de navegación
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = e.target.getAttribute('href').substring(1);
+                    activateSection(targetId);
+                    window.history.pushState(null, '', `#${targetId}`); // Actualiza la URL sin recargar
+                });
+            });
+
+            // Activar la sección basada en el hash de la URL al cargar la página
+            const initialHash = window.location.hash.substring(1);
+            if (initialHash && document.getElementById(initialHash)) {
+                activateSection(initialHash);
+            } else {
+                activateSection('inicio'); // Por defecto, activa la sección de inicio
+            }
+
+            // Actualizar el año en el footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 </html>
