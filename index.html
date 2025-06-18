@@ -27,7 +27,7 @@
             color: var(--color-dark);
             text-align: center;
             line-height: 1.6;
-            scroll-behavior: smooth; /* Desplazamiento suave para anclas */
+            scroll-behavior: smooth;
         }
 
         .container {
@@ -39,7 +39,7 @@
         /* Header Styling */
         header {
             background-color: var(--color-primary);
-            padding: 30px 20px 15px; /* Ajustado para la nav */
+            padding: 30px 20px 15px;
             color: var(--color-white);
             box-shadow: 0 4px 8px var(--color-shadow);
         }
@@ -68,13 +68,13 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex; /* Para poner los enlaces en línea */
-            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-            justify-content: center; /* Centra los elementos de navegación */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         nav ul li {
-            margin: 0 15px 10px; /* Espacio entre elementos y margen inferior para responsividad */
+            margin: 0 15px 10px;
         }
 
         nav ul li a {
@@ -103,7 +103,7 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 4px var(--color-shadow);
-            text-align: left; /* Alineación de texto dentro de las secciones */
+            text-align: left;
         }
 
         section h2 {
@@ -135,6 +135,38 @@
         section ul li {
             margin-bottom: 8px;
         }
+
+        /* Image Styling */
+        .section-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto; /* Centra la imagen y da espacio */
+            display: block; /* Asegura que 'margin: auto' funcione para centrar */
+            box-shadow: 0 4px 8px var(--color-shadow);
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+            justify-items: center; /* Centra las imágenes dentro de la cuadrícula */
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: 200px; /* Altura fija para las miniaturas */
+            object-fit: cover; /* Recorta la imagen para que quepa */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px var(--color-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.03); /* Efecto de zoom al pasar el ratón */
+        }
+
 
         /* Footer Styling */
         footer {
@@ -184,6 +216,9 @@
             section p, section ul {
                 font-size: 1rem;
             }
+            .image-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajuste para móviles */
+            }
         }
 
         @media (max-width: 480px) {
@@ -194,11 +229,14 @@
                 font-size: 1rem;
             }
             nav ul {
-                flex-direction: column; /* Apila los enlaces en pantallas muy pequeñas */
+                flex-direction: column;
                 align-items: center;
             }
             nav ul li {
                 margin: 5px 0;
+            }
+            .image-gallery {
+                grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
             }
         }
     </style>
@@ -206,7 +244,7 @@
 <body>
     <header>
         <div class="container">
-            <h1><a href="#inicio" title="Conscientemente | Inicio de Alimentación Saludable">Conscientemente</a></h1>
+            <h1><a href="#inicio" title="Conscientemente | Inicio de Alimentación Saludable y Bienestar">Conscientemente</a></h1>
             <p class="lema">Vive y come conscientemente saludable</p>
             <nav>
                 <ul>
@@ -227,6 +265,7 @@
         <div class="container">
             <section id="inicio">
                 <h2>Tu Espacio para una Alimentación y Vida Consciente</h2>
+                <img src="https://picsum.photos/id/1084/800/400" alt="Plato saludable con verduras y cereales, símbolo de alimentación consciente y dieta equilibrada" class="section-image" width="800" height="400">
                 <p>Bienvenido a **Conscientemente**, el lugar donde la **alimentación saludable** se une con el bienestar integral. Aquí, te guiamos en tu viaje hacia un estilo de vida más pleno, ofreciéndote recursos, **recetas nutritivas** y consejos prácticos para comer con intención y vivir en armonía. Nuestro objetivo es ayudarte a construir **hábitos saludables** duraderos.</p>
                 <p>Descubre cómo la **nutrición consciente** puede transformar tu energía, tu salud y tu conexión con el mundo. Únete a nuestra comunidad y empieza hoy mismo tu camino hacia una vida más **saludable y consciente**.</p>
             </section>
@@ -247,6 +286,12 @@
             <section id="recetas">
                 <h2>Recetas Saludables y Deliciosas para Todos</h2>
                 <p>En **Conscientemente**, creemos que comer **saludable** no tiene por qué ser aburrido. Nuestra colección de **recetas saludables** está diseñada para inspirarte a crear platos deliciosos y nutritivos que te encantarán. Encontrarás opciones para:</p>
+                <div class="image-gallery">
+                    <img src="https://picsum.photos/id/1080/400/300" alt="Receta de ensalada fresca y colorida, ideal para una dieta saludable" width="400" height="300">
+                    <img src="https://picsum.photos/id/1082/400/300" alt="Desayuno nutritivo con avena, frutas y frutos secos para energía" width="400" height="300">
+                    <img src="https://picsum.photos/id/1083/400/300" alt="Cena saludable con verduras asadas y pescado al horno" width="400" height="300">
+                    <img src="https://picsum.photos/id/1085/400/300" alt="Snack de frutas frescas variadas, opción saludable y refrescante" width="400" height="300">
+                </div>
                 <ul>
                     <li>**Desayunos energéticos:** Batidos verdes, avena nocturna, tostadas de aguacate.</li>
                     <li>**Comidas nutritivas:** Ensaladas vibrantes, bowls de cereales, sopas reconfortantes.</li>
@@ -270,6 +315,7 @@
 
             <section id="bienestar">
                 <h2>Bienestar Integral: Mente, Cuerpo y Alma</h2>
+                <img src="https://picsum.photos/id/1071/800/400" alt="Persona meditando en la naturaleza, simbolizando el bienestar mental y la calma" class="section-image" width="800" height="400">
                 <p>La **salud** va más allá de lo que comes. El **bienestar integral** abarca el equilibrio entre tu **alimentación consciente**, tu actividad física, tu salud mental y tus emociones. En **Conscientemente**, te ofrecemos recursos para cultivar un estilo de vida equilibrado:</p>
                 <ul>
                     <li>**Mindfulness y Meditación:** Técnicas para reducir el estrés y mejorar tu relación con la comida.</li>
