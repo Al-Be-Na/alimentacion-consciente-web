@@ -1,470 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conscientemente | Come, Siente y Ama consciente</title>
-    <meta name="description" content="Bienvenido a Conscientemente. Descubre una nueva forma de vivir a través de la nutrición plena, el equilibrio interior y una comunidad que te apoya.">
-    <meta name="keywords" content="alimentación consciente, nutrición plena, bienestar integral, vida sana, equilibrio interior, comunidad consciente, recetas saludables">
-    <meta name="author" content="Conscientemente Team">
-    <link rel="canonical" href="https://tudominio.github.io/index.html">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
-
-    <style>
-        /* 1. CONFIGURACIÓN Y NUEVA PALETA DE COLORES */
-        :root {
-            --color-primary: #008080;      /* Teal Profundo */
-            --color-secondary: #d2b48c;   /* Tan (Dorado suave) */
-            --color-dark: #333333;         /* Gris Carbón (Texto) */
-            --color-light: #f5f5dc;       /* Beige (Fondo) */
-            --color-white: #ffffff;
-            --color-shadow-light: rgba(0, 0, 0, 0.08);
-            --spacing-unit: 20px;
-            --content-max-width: 1200px;
-            --border-radius: 12px;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Garamond', 'Times New Roman', serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--color-light);
-            color: var(--color-dark);
-            line-height: 1.7;
-        }
-
-        /* 2. HEADER Y NAVEGACIÓN */
-        header {
-            background-color: var(--color-white);
-            padding: var(--spacing-unit) 0;
-            box-shadow: 0 4px 12px var(--color-shadow-light);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            max-width: var(--content-max-width);
-            margin: 0 auto;
-            padding: 0 var(--spacing-unit);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: var(--color-primary);
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        header h1 a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        nav ul li a {
-            color: var(--color-dark);
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            white-space: nowrap;
-        }
-
-        nav ul li a:hover, nav ul li a.active {
-            background-color: var(--color-primary);
-            color: var(--color-white);
-        }
-        
-        /* 3. SECCIÓN HERO (INICIO) - MODIFICADA */
-        #inicio {
-            position: relative;
-            background-image: url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=1770');
-            background-size: cover;
-            background-position: center center;
-            text-align: center;
-            padding: calc(var(--spacing-unit) * 7) var(--spacing-unit);
-            color: var(--color-white);
-        }
-
-        #inicio::before { /* Overlay para mejorar legibilidad */
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-
-        .hero-content { /* Contenedor para que el texto esté sobre el overlay */
-            position: relative;
-            z-index: 2;
-        }
-
-        #inicio h2 {
-            font-size: 3.5rem;
-            font-family: 'Garamond', serif;
-            font-weight: 500;
-            color: var(--color-white);
-            margin-bottom: var(--spacing-unit);
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-        }
-
-        #inicio p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto calc(var(--spacing-unit) * 2) auto;
-            color: var(--color-white);
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-        }
-
-        .cta-button {
-            background-color: var(--color-primary);
-            color: var(--color-white);
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            border: 2px solid var(--color-primary);
-            box-shadow: 0 4px 15px rgba(0, 128, 128, 0.2);
-            transition: all 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: rgba(255, 255, 255, 0.9);
-            color: var(--color-primary);
-            border-color: var(--color-primary);
-            transform: translateY(-3px);
-        }
-
-        /* 4. SECCIÓN CARRUSEL */
-        #carrusel-recetas {
-            padding: calc(var(--spacing-unit) * 4) 0;
-            background-color: var(--color-white);
-            position: relative;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            font-family: 'Garamond', serif;
-            font-weight: 500;
-            color: var(--color-primary);
-            margin-bottom: calc(var(--spacing-unit) * 2.5);
-        }
-        .carousel-container {
-            max-width: var(--content-max-width);
-            margin: auto;
-            overflow: hidden;
-            position: relative;
-            border-radius: var(--border-radius);
-        }
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .slide {
-            min-width: 100%;
-            position: relative;
-        }
-        .slide img {
-            width: 100%;
-            height: 550px;
-            object-fit: cover;
-            display: block;
-        }
-        .slide-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-            color: var(--color-white);
-            padding: calc(var(--spacing-unit) * 2.5) var(--spacing-unit);
-            text-align: center;
-        }
-        .slide-caption h3 {
-            margin: 0 0 10px 0;
-            font-size: 2rem;
-            font-family: 'Garamond', serif;
-            font-weight: 500;
-        }
-        .carousel-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 25px;
-            box-sizing: border-box;
-            z-index: 5;
-        }
-        .carousel-button {
-            background-color: rgba(255, 255, 255, 0.7);
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-            transition: background-color 0.3s ease;
-            color: var(--color-primary);
-        }
-        .carousel-button:hover {
-            background-color: var(--color-white);
-        }
-
-        /* 5. SECCIÓN DE 3 BLOQUES (PILARES) */
-        #pilares {
-            padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
-            background-color: var(--color-light);
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: calc(var(--spacing-unit) * 2.5);
-            max-width: var(--content-max-width);
-            margin: auto;
-        }
-        .grid-item {
-            background-color: var(--color-white);
-            border-radius: var(--border-radius);
-            padding: calc(var(--spacing-unit) * 2);
-            text-align: center;
-            box-shadow: 0 8px 25px var(--color-shadow-light);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 4px solid var(--color-secondary);
-        }
-        .grid-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-        }
-        .grid-item .icon {
-            width: 60px;
-            height: 60px;
-            margin-bottom: var(--spacing-unit);
-            color: var(--color-primary);
-        }
-        .grid-item h3 {
-            font-size: 1.6rem;
-            margin-top: 0;
-            margin-bottom: calc(var(--spacing-unit) * 0.75);
-            color: var(--color-dark);
-            font-family: 'Garamond', serif;
-            font-weight: 600;
-        }
-        .grid-item p {
-            font-size: 1rem;
-            margin-bottom: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        /* 6. FOOTER */
-        footer {
-            background-color: var(--color-dark);
-            color: var(--color-light);
-            padding: calc(var(--spacing-unit) * 2.5);
-            text-align: center;
-        }
-        footer p {
-            margin: 5px 0;
-        }
-        footer a {
-            color: var(--color-secondary);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        
-        /* 7. AJUSTES RESPONSIVE */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-            }
-            header h1 {
-                margin-bottom: 15px;
-            }
-            #inicio {
-                padding: calc(var(--spacing-unit) * 5) var(--spacing-unit);
-            }
-            #inicio h2 {
-                font-size: 2.8rem;
-            }
-            #inicio p {
-                font-size: 1.1rem;
-            }
-            .slide img {
-                height: 400px;
-            }
-            .section-title {
-                font-size: 2.2rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Conscientemente: Comer, Sentir y Amar Consciente. Cocina sana, mente clara, vida plena.">
+  <title>Conscientemente</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7f5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #aad9b7;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-style: italic;
+      color: #2d5942;
+    }
+    main {
+      padding: 2rem 1rem;
+    }
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+    blockquote {
+      font-size: 1.2rem;
+      margin: 1.5rem auto;
+      max-width: 700px;
+      color: #5a7c63;
+    }
+    footer {
+      background-color: #e1f0e5;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Conscientemente</h1>
+    <p>Comer, Sentir y Amar Consciente</p>
+  </header>
 
-    <header>
-        <div class="header-container">
-            <h1><a href="#inicio">Conscientemente</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="#carrusel-recetas">Recetas</a></li>
-                    <li><a href="#pilares">Filosofía</a></li>
-                    <li><a href="#">Comunidad</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <main>
+    <img src="alimentos-saludables.jpg" alt="Plato con alimentos saludables y coloridos">
 
-    <main>
-        <section id="inicio">
-            <div class="hero-content">
-                <h2>Come, Siente y Ama consciente</h2>
-                <p>Un espacio para reconectar contigo a través del alimento, cultivar tu paz interior y vivir una vida más plena y auténtica.</p>
-                <a href="#pilares" class="cta-button">Descubre Nuestra Filosofía</a>
-            </div>
-        </section>
+    <p><strong>Aún no tenemos productos, pero sí una visión clara:</strong></p>
+    <p>Transformar cómo comemos, sentimos y vivimos.</p>
 
-        <section id="carrusel-recetas">
-            <h2 class="section-title">Inspiración para tu Cocina</h2>
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="slide">
-                        <img src="https://picsum.photos/id/1060/1200/550" alt="Plato principal vegetariano con quinoa y verduras">
-                        <div class="slide-caption">
-                            <h3>Comidas Completas y Nutritivas</h3>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://picsum.photos/id/28/1200/550" alt="Desayuno saludable con frutas y yogur">
-                        <div class="slide-caption">
-                            <h3>Desayunos que Despiertan tus Sentidos</h3>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://picsum.photos/id/1070/1200/550" alt="Postre saludable con bayas y crema">
-                        <div class="slide-caption">
-                            <h3>Postres que Nutren el Alma</h3>
-                        </div>
-                    </div>
-                     <div class="slide">
-                        <img src="https://picsum.photos/id/1025/1200/550" alt="Smoothie verde desintoxicante">
-                        <div class="slide-caption">
-                            <h3>Bebidas que Revitalizan</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-nav">
-                    <button class="carousel-button" id="prevBtn">❮</button>
-                    <button class="carousel-button" id="nextBtn">❯</button>
-                </div>
-            </div>
-        </section>
+    <blockquote>“Lo que comemos se convierte en lo que somos.”</blockquote>
+    <blockquote>“Cocinar con atención es meditar con fuego.”</blockquote>
+    <blockquote>“Alimentar el cuerpo es también alimentar el alma.”</blockquote>
+    <blockquote>“La consciencia en la cocina transforma el acto de comer en un ritual de vida.”</blockquote>
+  </main>
 
-        <section id="pilares">
-            <h2 class="section-title">Los 3 Pilares de tu Bienestar</h2>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 00.7-17.937 9 9 0 11-1.4 17.237c.463.2.955.3 1.455.4zM12 6v6l4 2" /></svg>
-                    <h3>Nutrición Plena</h3>
-                    <p>Elige alimentos que te llenen de vida. Aprende a comer con intención, escuchando a tu cuerpo y disfrutando cada bocado.</p>
-                </div>
-                <div class="grid-item">
-                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
-                    <h3>Equilibrio Interior</h3>
-                    <p>Tu bienestar va más allá del plato. Cultiva la calma mental y la serenidad a través de prácticas de mindfulness y autocuidado.</p>
-                </div>
-                <div class="grid-item">
-                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.75a3 3 0 00-3-3H9a3 3 0 00-3 3m12 0a3 3 0 01-3 3H9a3 3 0 01-3-3m12 0v-3.375c0-.621-.504-1.125-1.125-1.125H12V10.5h1.125a1.125 1.125 0 011.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h.375m-3.75 0v-3.375c0-.621.504-1.125 1.125-1.125H12V10.5H9.375a1.125 1.125 0 00-1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125H6.75m11.25 0v-3.375c0-.621-.504-1.125-1.125-1.125H9.375a1.125 1.125 0 00-1.125 1.125v3.375" /></svg>
-                    <h3>Comunidad Consciente</h3>
-                    <p>No estás solo en este viaje. Conecta con otras personas que comparten tus valores y creced juntos en un entorno de apoyo mutuo.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Conscientemente. Todos los derechos reservados.</p>
-            <p>Diseñado con ♥ para una vida más saludable. <a href="#">Política de Privacidad</a></p>
-        </div>
-    </footer>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Lógica del Carrusel
-            const track = document.querySelector('.carousel-track');
-            if (!track) return;
-
-            const slides = Array.from(track.children);
-            const nextButton = document.getElementById('nextBtn');
-            const prevButton = document.getElementById('prevBtn');
-            
-            if (slides.length === 0) return;
-
-            let slideWidth = slides[0].getBoundingClientRect().width;
-            let currentIndex = 0;
-
-            const setSlidePosition = () => {
-                slideWidth = slides[0].getBoundingClientRect().width;
-            }
-            
-            setSlidePosition();
-
-            const moveToSlide = (targetIndex) => {
-                if(track){
-                   track.style.transform = 'translateX(-' + slideWidth * targetIndex + 'px)';
-                }
-                currentIndex = targetIndex;
-            }
-
-            nextButton.addEventListener('click', () => {
-                const nextIndex = (currentIndex + 1) % slides.length;
-                moveToSlide(nextIndex);
-            });
-
-            prevButton.addEventListener('click', () => {
-                const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-                moveToSlide(prevIndex);
-            });
-            
-            setInterval(() => {
-                const nextIndex = (currentIndex + 1) % slides.length;
-                moveToSlide(nextIndex);
-            }, 5000);
-
-            window.addEventListener('resize', () => {
-                track.style.transition = 'none';
-                setSlidePosition();
-                moveToSlide(currentIndex);
-                // Force a reflow before re-enabling transitions
-                void track.offsetWidth; 
-                track.style.transition = 'transform 0.5s ease-in-out';
-            });
-        });
-    </script>
+  <footer>
+    © 2025 Conscientemente · Cocina Sana, Vida Plena
+  </footer>
 </body>
 </html>
