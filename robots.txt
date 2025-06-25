@@ -1,0 +1,19 @@
+# ===================================================================
+# robots.txt para Conscientemente
+# Fecha de creación: 2025-06-25
+# ===================================================================
+
+# El asterisco (*) indica que las siguientes reglas se aplican a todos los robots y crawlers.
+User-agent: *
+
+# La barra (/) después de "Allow" significa que se permite el rastreo de todo el contenido del sitio.
+# Esto es ideal para un sitio de una sola página donde quieres que todo sea visible.
+Allow: /
+
+# Descomenta la siguiente línea si tuvieras una sección de administración o privada que no quieres que se indexe.
+# Disallow: /admin/
+
+# Es una buena práctica indicar la ubicación del sitemap.
+# Ayuda a los buscadores a encontrar todas tus URLs importantes de manera más eficiente.
+# Asegúrate de reemplazar "tudominio.github.io" con tu dominio real.
+https://github.com/Al-Be-Na/alimentacion-consciente-web/sitemap.xml
