@@ -1,0 +1,28 @@
+{
+  "name": "Conscientemente | Cocina y Alimentación Saludable",
+  "short_name": "Conscientemente",
+  "description": "Recetas, consejos e inspiración para una alimentación y vida consciente. Nutre tu cuerpo y alma.",
+  "start_url": "/alimentacion-consciente-web/index.html",
+  "display": "standalone",
+  "background_color": "#f0f8f5",
+  "theme_color": "#4caf50",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/alimentacion-consciente-web/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/alimentacion-consciente-web/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/alimentacion-consciente-web/icons/maskable-icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}
